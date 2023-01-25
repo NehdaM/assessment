@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="regbox">
+         <form action="" onsubmit="return validation()">
+            <h1 class="text-success text-center">Registration</h1>
+        <br><br>
+        <div class="form-group">
+            <label for="">College Name:</label>
+            <input type="text" id="clg">
+            <span id="college" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="">Place:</label>
+            <input type="text" id="plc">
+            <span id="place" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="">Team name:</label max-len>
+            <input type="text" maxlength="19" id="tm">
+            <span id="team" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="">No. of members in team:</label>
+            <input type="number" id="mem">
+            <span id="members" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="">Team Leader's name:</label>
+            <input type="text" id="ldr">
+            <span id="leader" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="">Contact no. of Team Leader:</label>
+            <input type="tel" id="cnt" maxlength="10">
+            <span id="contact" class="text-danger" style="font-weight: bold;"></span>
+        </div>
+        <br><br>
+
+        <a href="sub.html"><input type="submit" value="submit" class="btn-btn-success"></a>
+      </form>
+    </div>
+
+
+    <script src="login.js"></script>
+
+    <script type="text/javascript">
+        function validation(){
+    var clg = document.getElementById('clg').value;
+    var plc = document.getElementById('plc').value;
+    var tm = document.getElementById('tm').value;
+    var mem  = document.getElementById('mem').value;
+    var ldr = document.getElementById('ldr').value;
+    var cnt = document.getElementById('cnt').value;
+
+
+ if(clg == ""){
+    document.getElementById('college').innerHTML="*Please enter this field";
+    return false;
+}
+
+if(plc == ""){
+    document.getElementById('place').innerHTML="*Please enter this field";
+    return false;
+}
+
+if(tm == ""){
+    document.getElementById('team').innerHTML="*Please enter this field";
+    return false;
+}
+
+if(mem == ""){
+    document.getElementById('members').innerHTML="*Please enter this field";
+    return false;
+}
+
+if(ldr== ""){
+    document.getElementById('leader').innerHTML="*Please enter this field ";
+    return false;
+}
+
+if(clg == ""){
+    document.getElementById('contact').innerHTML="*Please enter this field";
+    return false;
+}
+}
+    </script>
+</body>
+</html>
